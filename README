@@ -1,0 +1,18 @@
+Nagios plugin (script) to check the I/O status of a device.
+
+This script has been designed and written on Linux for the lowest common denominator of shells (sh), requiring awk, grep, tail and iostat as external programs. The locations of these can easily be changed by editing the variables at the top of the script. The script can be used to query 3 of the key statistics (Transactions Per Second, KB read per second, and KB written per second) separately or all 3 can be checked at the same time. Note though that there is only one set of warning and critical values so if you do run it "all-in-one" then the same warning and critical levels will be used for all, note that in most situations this is not desirable!
+
+Note that device should NOT include full path, instead it should just be the device name, e.g. hda1, or sda1, or vpatha1, etc...
+Note that you need iostat in order to run this plugin (Debian/Ubuntu: sysstat)
+
+
+
+Installation
+
+In your Nagios plugins directory run
+
+git clone git://github.com/popgo/nagios-plugin-diskio.git
+
+
+Usage
+Install in Nagios/Centreon
