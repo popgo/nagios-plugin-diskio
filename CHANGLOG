@@ -1,3 +1,5 @@
 Forked from Monitoring EXCHANGE's check_iostat script. You can checkout the original script by view the link https://www.monitoringexchange.org/inventory/Check-Plugins/Hardware/Devices/Misc/check_iostat
 
 =============================================================================
+
+1.4.8 - Added I/O util% feature by iostat -x
